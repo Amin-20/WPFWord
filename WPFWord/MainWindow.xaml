@@ -1,0 +1,25 @@
+﻿<Window x:Class="WPFWord.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPFWord"
+        mc:Ignorable="d"
+        Title="Word" Height="450" Width="800"
+        Icon="Images\icons8-microsoft-word-48.png"
+        ResizeMode="NoResize">
+
+    <Canvas>
+        <Button Width="50" 
+                Height="45"></Button>
+        
+        <TextBox Name="contentTxtb"
+                 Canvas.Top="50"
+                 Width="800"
+                 Height="384"
+                 FontSize="18"
+                 Text="salam"
+                 KeyUp="contentTxtb_KeyUp"
+                 ></TextBox>
+    </Canvas>
+</Window>
