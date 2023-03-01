@@ -29,7 +29,7 @@ namespace WPFWord
         {
             if(e.Key == Key.Enter)
             {
-                contentTxtb.Text +="\n \n";
+                contentTxtb.Text +='\n';
             }
         }
     }

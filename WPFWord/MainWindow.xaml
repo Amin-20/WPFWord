@@ -9,17 +9,18 @@
         Icon="Images\icons8-microsoft-word-48.png"
         ResizeMode="NoResize">
 
-    <Canvas>
-        <Button Width="50" 
-                Height="45"></Button>
-        
+    <Canvas Background="#0369CA">
+
         <TextBox Name="contentTxtb"
-                 Canvas.Top="50"
+                 Canvas.Top="64"
                  Width="800"
-                 Height="384"
+                 Height="370"
                  FontSize="18"
                  Text="salam"
-                 KeyUp="contentTxtb_KeyUp"
+                 KeyUp="contentTxtb_KeyUp" HorizontalAlignment="Center" VerticalAlignment="Top"
                  ></TextBox>
+        <TextBlock Height="30">
+
+        </TextBlock>
     </Canvas>
 </Window>
