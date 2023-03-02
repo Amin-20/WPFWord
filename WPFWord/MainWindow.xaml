@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WPFWord"
         mc:Ignorable="d"
-        Title="Word" Height="450" Width="800"
+        Title="Word" Height="450" Width="814"
         Icon="Images\icons8-microsoft-word-48.png"
         ResizeMode="NoResize">
 
@@ -16,11 +16,100 @@
                  Width="800"
                  Height="370"
                  FontSize="18"
-                 Text="salam"
-                 KeyUp="contentTxtb_KeyUp" HorizontalAlignment="Center" VerticalAlignment="Top"
-                 ></TextBox>
-        <TextBlock Height="30">
-
+                 KeyUp="contentTxtb_KeyUp" 
+                 />
+        <TextBlock Height="30" Width="207" 
+                   Background="White"
+                   Canvas.Left="17"
+                   Canvas.Top="17">
         </TextBlock>
+
+        <Button Name="openBtn"
+                Height="30"
+                Width="40"
+                Canvas.Left="224"
+                Canvas.Top="17"
+                BorderThickness="0.3" 
+                Click="openBtn_Click"
+                >
+            <Image Source="Images/arrow.png" Height="17" Width="20"></Image>
+        </Button>
+        <Button Name="saveBtn"
+                Height="30"
+                Width="55"
+                Canvas.Left="286"
+                Canvas.Top="17"
+                BorderThickness="0.3"
+                Content="Save"
+                FontWeight="Bold" 
+                FontSize="17"
+                Click="saveBtn_Click"
+                >
+        </Button>
+
+        <CheckBox Canvas.Left="353"
+                  Canvas.Top="13" Height="15"
+                  Width="78" 
+                  Content="AutoSave"
+                  HorizontalAlignment="Left"
+                  VerticalAlignment="Center"
+                  FontSize="9"
+                  VerticalContentAlignment="Center"
+                  Foreground="White"
+                  >
+            <CheckBox.RenderTransform>
+                <ScaleTransform ScaleX="2.5" ScaleY="2.5"></ScaleTransform>
+            </CheckBox.RenderTransform>
+        </CheckBox>
+
+        <Button Name="cutBtn"
+                Height="30"
+                Width="55"
+                Canvas.Left="513"
+                Canvas.Top="17"
+                BorderThickness="0.3"
+                Content="Cut"
+                FontWeight="Bold" 
+                FontSize="17" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                
+                >
+        </Button>
+
+        <Button Name="selectAllBtn"
+                Height="30"
+                Width="96"
+                Canvas.Left="695"
+                Canvas.Top="17"
+                BorderThickness="0.3"
+                Content="SelectAll"
+                FontWeight="Bold" 
+                FontSize="17"
+                Click="selectAllBtn_Click" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                >
+        </Button>
+
+        <Button Name="copyBtn"
+                Height="30"
+                Width="55"
+                Canvas.Left="574"
+                Canvas.Top="17"
+                BorderThickness="0.3"
+                Content="Copy"
+                FontWeight="Bold" 
+                FontSize="17" Click="copyBtn_Click" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                >
+        </Button>
+        <Button Name="pasteBtn"
+                Height="30"
+                Width="55"
+                Canvas.Left="635"
+                Canvas.Top="17"
+                BorderThickness="0.3"
+                Content="Paste"
+                FontWeight="Bold" 
+                FontSize="17"
+                >
+        </Button>
+
     </Canvas>
 </Window>

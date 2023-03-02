@@ -97,5 +97,8 @@
   <ItemGroup>
     <Resource Include="Images\icons8-microsoft-word-48.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\arrow.png" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
