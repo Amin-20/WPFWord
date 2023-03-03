@@ -11,14 +11,14 @@
 
     <Canvas Background="#0369CA">
 
-        <ScrollViewer>
-            <TextBox Name="contentTxtb"
+
+        <TextBox Name="contentTxtb"
                  Canvas.Top="64"
                  Width="800"
                  Height="370"
                  FontSize="18"
                  />
-        </ScrollViewer>
+
         <TextBlock Height="30" Width="207" 
                    Background="White"
                    Canvas.Left="17"
