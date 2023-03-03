@@ -11,13 +11,14 @@
 
     <Canvas Background="#0369CA">
 
-        <TextBox Name="contentTxtb"
+        <ScrollViewer>
+            <TextBox Name="contentTxtb"
                  Canvas.Top="64"
                  Width="800"
                  Height="370"
                  FontSize="18"
-                 KeyUp="contentTxtb_KeyUp" 
                  />
+        </ScrollViewer>
         <TextBlock Height="30" Width="207" 
                    Background="White"
                    Canvas.Left="17"
@@ -71,6 +72,7 @@
                 Content="Cut"
                 FontWeight="Bold" 
                 FontSize="17" HorizontalAlignment="Left" VerticalAlignment="Center" 
+                Click="cutBtn_Click"
                 
                 >
         </Button>
@@ -108,6 +110,7 @@
                 Content="Paste"
                 FontWeight="Bold" 
                 FontSize="17"
+                Click="pasteBtn_Click"
                 >
         </Button>
 

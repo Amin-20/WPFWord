@@ -27,22 +27,17 @@ namespace WPFWord
             InitializeComponent();
         }
 
-        private void contentTxtb_KeyUp(object sender, KeyEventArgs e)
-        {
-            if(e.Key == Key.Enter)
-            {
-                //contentTxtb.SelectAll();
-            }
-        }
+      
 
         private void copyBtn_Click(object sender, RoutedEventArgs e)
         {
-            DataObjectCopyingEventArgs eventArgs=contentTxtb.DataContext as DataObjectCopyingEventArgs;
+            contentTxtb.Copy();
         }
 
         private void selectAllBtn_Click(object sender, RoutedEventArgs e)
         {
             contentTxtb.SelectAll();
+            contentTxtb.Focus();
         }
 
         private void openBtn_Click(object sender, RoutedEventArgs e)
@@ -72,6 +67,16 @@ namespace WPFWord
                     contentTxtb.Text = String.Empty;
                 }
             }
+        }
+
+        private void cutBtn_Click(object sender, RoutedEventArgs e)
+        {
+            contentTxtb.Cut();
+        }
+
+        private void pasteBtn_Click(object sender, RoutedEventArgs e)
+        {
+            contentTxtb.Paste();
         }
     }
 }
