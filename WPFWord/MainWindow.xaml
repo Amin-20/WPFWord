@@ -11,15 +11,21 @@
 
     <Canvas Background="#0369CA">
 
+        <WrapPanel VerticalAlignment="Top">
 
-        <TextBox Name="contentTxtb"
+            <TextBox AcceptsReturn="True"
+                 Name="contentTxtb"
                  Canvas.Top="64"
                  Width="800"
                  Height="370"
                  FontSize="18"
+                 Margin="0,64,0,0"
+                 
                  />
+        </WrapPanel>
 
-        <TextBlock Height="30" Width="207" 
+        <TextBlock x:Name="sourceTxtbl"
+                   Height="30" Width="207" 
                    Background="White"
                    Canvas.Left="17"
                    Canvas.Top="17">

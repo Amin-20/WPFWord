@@ -52,6 +52,7 @@ namespace WPFWord
                 using (var sr = File.OpenText(openDialog.FileName))
                 {
                     contentTxtb.Text = sr.ReadToEnd();
+            
                 }
             }
         }
