@@ -14,6 +14,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using Path = System.IO.Path;
 
 namespace WPFWord
 {
@@ -27,7 +28,7 @@ namespace WPFWord
             InitializeComponent();
         }
 
-      
+        string location = "";
 
         private void copyBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -52,22 +53,19 @@ namespace WPFWord
                 using (var sr = File.OpenText(openDialog.FileName))
                 {
                     contentTxtb.Text = sr.ReadToEnd();
-            
+                    location=Path.GetFullPath(openDialog.FileName);
+                    sourceTxtbl.Text = location;
                 }
             }
         }
 
         private void saveBtn_Click(object sender, RoutedEventArgs e)
         {
-            SaveFileDialog save = new SaveFileDialog();
-            if (save.ShowDialog() == true)
-            {
-                using (var sw = new StreamWriter(save.FileName))
-                {
-                    sw.Write(contentTxtb.Text);
-                    contentTxtb.Text = String.Empty;
-                }
-            }
+            MessageBox.Show("Succesfully","Saved",MessageBoxButton.OK,MessageBoxImage.Information);
+            File.WriteAllText(location, contentTxtb.Text);
+            contentTxtb.Text = "";
+            location = "";
+            sourceTxtbl.Text = "";
         }
 
         private void cutBtn_Click(object sender, RoutedEventArgs e)
