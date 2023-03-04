@@ -29,6 +29,7 @@ namespace WPFWord
         }
 
         string location = "";
+        public bool IsClicked { get; set; } = false;
 
         private void copyBtn_Click(object sender, RoutedEventArgs e)
         {
@@ -76,6 +77,24 @@ namespace WPFWord
         private void pasteBtn_Click(object sender, RoutedEventArgs e)
         {
             contentTxtb.Paste();
+        }
+
+        private void saveChek_Checked(object sender, RoutedEventArgs e)
+        {
+            IsClicked = true;
+        }
+
+        private void saveChek_Unchecked(object sender, RoutedEventArgs e)
+        {
+            IsClicked= false;
+        }
+
+        private void contentTxtb_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            if (IsClicked == true)
+            {
+                File.WriteAllText(location, contentTxtb.Text);
+            }
         }
     }
 }

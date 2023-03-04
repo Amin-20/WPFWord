@@ -38,13 +38,13 @@
                             <Storyboard x:Key="right">
                                 <ThicknessAnimation Storyboard.TargetProperty="Margin" 
                                                     Storyboard.TargetName="button"
-                                                    Duration="0:0:0:4"
+                                                    Duration="0:0:0:0.5"
                                                     From="0,0,0,0"
                                                     To="28,0,0,0"
                                                     >
                                     <ThicknessAnimation.EasingFunction>
                                         <CircleEase EasingMode="EaseOut">
-                                            
+
                                         </CircleEase>
                                     </ThicknessAnimation.EasingFunction>
                                 </ThicknessAnimation>
@@ -52,7 +52,7 @@
                             <Storyboard x:Key="left">
                                 <ThicknessAnimation Storyboard.TargetProperty="Margin" 
                                                     Storyboard.TargetName="button"
-                                                    Duration="0:0:0:4"
+                                                    Duration="0:0:0:0.5"
                                                     From="18,0,0,0"
                                                     To="0,0,0,0"
                                                     >
@@ -67,11 +67,11 @@
                         <ControlTemplate.Triggers>
                             <Trigger Property="IsChecked" Value="False">
                                 <Trigger.ExitActions>
-                                    <RemoveStoryboard BeginStoryboardName="Left">
-                                        
+                                    <RemoveStoryboard BeginStoryboardName="leftt">
+
                                     </RemoveStoryboard>
                                     <BeginStoryboard Storyboard="{StaticResource right}" x:Name="rightt">
-                                        
+
                                     </BeginStoryboard>
                                 </Trigger.ExitActions>
                                 <Setter TargetName="button"
@@ -81,7 +81,7 @@
                             </Trigger>
                             <Trigger Property="IsChecked" Value="true">
                                 <Trigger.ExitActions>
-                                    <RemoveStoryboard BeginStoryboardName="Right">
+                                    <RemoveStoryboard BeginStoryboardName="rightt">
 
                                     </RemoveStoryboard>
                                     <BeginStoryboard Storyboard="{StaticResource left}" x:Name="leftt">
@@ -90,7 +90,7 @@
                                 </Trigger.ExitActions>
                                 <Setter TargetName="button"
                                         Property="Background"
-                                        Value="#ff060600">
+                                        Value="SpringGreen">
                                 </Setter>
                             </Trigger>
 
@@ -112,7 +112,7 @@
                  Height="370"
                  FontSize="18"
                  Margin="0,64,0,0"
-                 
+                 TextChanged="contentTxtb_TextChanged"
                  />
         </WrapPanel>
 
@@ -148,13 +148,15 @@
         </Button>
 
         <CheckBox Name="saveChek"
-                  Canvas.Left="376"
-                  Canvas.Top="24" Height="25"
+                  Canvas.Left="362"
+                  Canvas.Top="20" Height="27"
                   Width="60" 
-                  HorizontalAlignment="Left"
-                  VerticalAlignment="Center"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Top"
                   VerticalContentAlignment="Center"
                   Foreground="White"
+                  Checked="saveChek_Checked"
+                  Unchecked="saveChek_Unchecked"
                   >
         </CheckBox>
 
@@ -208,6 +210,10 @@
                 Click="pasteBtn_Click"
                 >
         </Button>
+
+        <Label Content="Auto Save"
+               Foreground="White"
+               FontSize="18" Canvas.Left="415" Canvas.Top="13" HorizontalAlignment="Left" Height="37" VerticalAlignment="Center" Width="101"></Label>
 
     </Canvas>
 </Window>
